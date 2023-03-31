@@ -380,6 +380,19 @@ body {
 	font-weight: 500;
 }
 
+#content main .head-title .btn-download-r {
+	height: 36px;
+	padding: 0 16px;
+	border-radius: 36px;
+	background: var(--bg-dob-red);
+	color: var(--light);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-gap: 10px;
+	font-weight: 500;
+}
+
 
 #content main .box-info {
 	display: grid;
@@ -627,4 +640,33 @@ body {
 	#content main .table-data .order table {
 		min-width: 400px;
 	}
+}
+
+
+/* USERS ---UTILISATEURS */
+
+h5.table-avatar {
+    align-items: center;
+    display: inline-flex;
+    font-size: inherit;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+	white-space: nowrap;
+}
+h5.table-avatar.blue-link a {
+	color: #007bff;
+}
+
+.table-responsive {
+	white-space: nowrap;
+	width: 100%;
+}
+
+
+/* MODAL---------- */
+.btn-add{
+	background-color: var(--bg-dob-green);
+	color:#fff;
 }

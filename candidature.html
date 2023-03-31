@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./vendors/bootstrap-icons/bootstrap-icons.css">
+    <!-- Mon css -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>DOBAS| Users</title>
+</head>
+
+<body>
+
+
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+
+        <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+            <img src="./img/congo.png" class="img-fluid mx-3" alt="logo" width="60px">
+            <div class="fs-2 title">
+                <span class="text-dob-color-red">DO</span><span class="text-dob-color-yellow">BAS</span>
+            </div>
+        </a>
+
+        <ul class="side-menu top">
+            <li class="active">
+                <a href="index.html">
+                    <i class="bi .bi-bar-chart-fill"></i>
+                    <span class="text">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="candidature.html">
+                    <i class="bi bi-person-lines-fill"></i>
+                    <span class="text">Candidatures</span>
+                </a>
+            </li>
+            <li>
+                <a href="update.html">
+                    <i class="bi bi-hourglass-split"></i>
+                    <span class="text">Update</span>
+                </a>
+            </li>
+            <li>
+                <a href="user.html">
+                    <i class="bi bi-people-fill"></i>
+                    <span class="text">Utilisateurs</span>
+                </a>
+            </li>
+            <li>
+                <a href="help.html">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <span class="text">Aides</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="side-menu">
+            <li>
+                <a href="setting.html">
+                    <i class="bi bi-gear-fill"></i>
+                    <span class="text">Paramètres</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="logout">
+                    <i class="bi bi-box-arrow-left"></i>
+                    <span class="text">Deconnexion</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+
+
+    <!-- CONTENU -->
+    <section id="content">
+        <!-- NAVBAR -->
+        <nav>
+            <i class='bi bi-menu'></i>
+            <a href="#" class="nav-link">Rechercher</a>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Nom de l'étudiant...">
+                    <button type="submit" class="search-btn"><i class='bi bi-search'></i></button>
+                </div>
+            </form>
+            <input type="checkbox" id="switch-mode" hidden>
+            <label for="switch-mode" class="switch-mode"></label>
+            <a href="#" class="notification">
+                <i class='bi bi-bell'></i>
+                <span class="num">8</span>
+            </a>
+            <a href="#" class="profile">
+                <img src="img/user.png">
+            </a>
+        </nav>
+        <!-- NAVBAR -->
+
+
+        <main>
+
+            <!-- Page Wrapper -->
+            <div class="page-wrapper">
+
+                <!-- Page Content -->
+                <div class="content container-fluid">
+
+                    <!-- Page Header -->
+                    <div class="page-header">
+                        <div class="row align-items-center">
+                            <div class="head-title">
+                                <div class="left">
+                                    <h1>Gestion candidatures</h1>
+                                    <ul class="breadcrumb">
+                                        <li>
+                                            <a href="#">Admin</a>
+                                        </li>
+                                        <li><i class='bi bi-chevron-right'></i></li>
+                                        <li>
+                                            <a class="active" href="#">Candidature(s)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- /Page Header -->
+
+                        <!-- Add User Modal -->
+
+                     
+
+                        <!-- Search Filter -->
+                        <div class="row filter-row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-input">
+									<label class="focus-label">Nom</label>
+									<input type="text" class="form-control floating">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-input">
+									<label class="focus-label">Email</label>
+                                    <input type="text" class="form-control floating">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3">
+									<label for="#" class="form-input">Ecole</label>
+                                    <select class="form-select form-select-sm floating"
+									aria-label=".form-select-sm example">
+                                        <option>IMB</option>
+                                        <option>ESCAT</option>
+                                        <option>ISTP</option>
+										<option>EAD</option>
+                                    </select>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <a href="#" class="btn btn-success">Recherche </a>
+                            </div>
+                        </div>
+                        <!-- /Search Filter -->
+
+                        <div class="table-data">
+                            <div class="order">
+                                <div class="head">
+                                    <h3>Candidature(s) </h3>
+                                    
+                                </div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Nom(s)</th>
+                                            <th>Prénom(s)</th>
+                                            <th>Filière</th>
+                                            <th>Ecole</th>
+                                            <th>Statut</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <img src="img/user.png">
+                                                <p>John Doe</p>
+                                            </td>
+                                            <td>Doe</td>
+                                            <td>Informatique et reseau</td>
+                                            <td>IMB</td>
+                                            <td><span class="status completed">Valider</span></td>
+                                            <td><i class="bi bi-three-dots-vertical" type="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-eye-fill"> </i> Voir</a></li>
+													<li><a class="dropdown-item" href="#"><i class="bi bi-validation"> </i> Valider</a></li>
+                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-delete"> </i> Eliminer</a></li>
+                                                  </ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="img/user.png">
+                                                <p>John Doe</p>
+                                            </td>
+                                            <td>Deo</td>
+                                            <td>Management</td>
+                                            <td>ISTP</td>
+                                            <td><span class="status pending">Eliminer</span></td> 
+                                            <td><i class="bi bi-three-dots-vertical" type="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-eye-fill"> </i> Voir</a></li>
+													<li><a class="dropdown-item" href="#"><i class="bi bi-validation"> </i> Valider</a></li>
+                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-delete"> </i> Eliminer</a></li>
+                                                  </ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="img/user.png">
+                                                <p>John Doe</p>
+                                            </td>
+                                            <td>Deo</td>
+                                            <td>Marketing</td>
+                                            <td>IMB</td>
+                                            <td><span class="status process">Traitement</span></td>
+                                            <td><i class="bi bi-three-dots-vertical" type="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-eye-fill"> </i> Voir</a></li>
+													<li><a class="dropdown-item" href="#"><i class="bi bi-validation"> </i> Valider</a></li>
+                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-delete"> </i> Eliminer</a></li>
+                                                  </ul></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
+        integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
+        crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

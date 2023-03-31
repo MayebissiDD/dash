@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./vendors/bootstrap-icons/bootstrap-icons.css">
+    <!-- Mon css -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>DOBAS| Users</title>
+</head>
+
+<body>
+
+
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+
+        <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+            <img src="./img/congo.png" class="img-fluid mx-3" alt="logo" width="60px">
+            <div class="fs-2 title">
+                <span class="text-dob-color-red">DO</span><span class="text-dob-color-yellow">BAS</span>
+            </div>
+        </a>
+
+        <ul class="side-menu top">
+            <li class="active">
+                <a href="index.html">
+                    <i class="bi .bi-bar-chart-fill"></i>
+                    <span class="text">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="candidature.html">
+                    <i class="bi bi-person-lines-fill"></i>
+                    <span class="text">Candidatures</span>
+                </a>
+            </li>
+            <li>
+                <a href="update.html">
+                    <i class="bi bi-hourglass-split"></i>
+                    <span class="text">Update</span>
+                </a>
+            </li>
+            <li>
+                <a href="user.html">
+                    <i class="bi bi-people-fill"></i>
+                    <span class="text">Utilisateurs</span>
+                </a>
+            </li>
+            <li>
+                <a href="help.html">
+                    <i class="bi bi-info-circle-fill"></i>
+                    <span class="text">Aides</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="side-menu">
+            <li>
+                <a href="setting.html">
+                    <i class="bi bi-gear-fill"></i>
+                    <span class="text">Paramètres</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="logout">
+                    <i class="bi bi-box-arrow-left"></i>
+                    <span class="text">Deconnexion</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+
+
+    <!-- CONTENU -->
+    <section id="content">
+        <!-- NAVBAR -->
+        <nav>
+            <i class='bi bi-menu'></i>
+            <a href="#" class="nav-link">Rechercher</a>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Nom de l'étudiant...">
+                    <button type="submit" class="search-btn"><i class='bi bi-search'></i></button>
+                </div>
+            </form>
+            <input type="checkbox" id="switch-mode" hidden>
+            <label for="switch-mode" class="switch-mode"></label>
+            <a href="#" class="notification">
+                <i class='bi bi-bell'></i>
+                <span class="num">8</span>
+            </a>
+            <a href="#" class="profile">
+                <img src="img/user.png">
+            </a>
+        </nav>
+        <!-- NAVBAR -->
+
+
+        <main>
+
+            <!-- Page Wrapper -->
+            <div class="page-wrapper">
+
+                <!-- Page Content -->
+                <div class="content container-fluid">
+
+                    <!-- Page Header -->
+                    <div class="page-header">
+                        <div class="row align-items-center">
+                            <div class="head-title">
+                                <div class="left">
+                                    <h1>Gestion utilisateurs</h1>
+                                    <ul class="breadcrumb">
+                                        <li>
+                                            <a href="#">Admin</a>
+                                        </li>
+                                        <li><i class='bi bi-chevron-right'></i></li>
+                                        <li>
+                                            <a class="active" href="#">Utilisateur(s)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-auto float-right ml-auto">
+                                    <!-- Button trigger modal -->
+                                    <a type="button" class="btn-download-r" data-bs-toggle="modal"
+                                        data-bs-target="#add_user"><i class="bi bi-plus"></i>
+                                        Créer un utilisateur
+                                    </a>
+                                </div>
+
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="add_user" data-bs-backdrop="static" data-bs-keyboard="false"
+                                    tabindex="-1" aria-labelledby="add_userLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="add_userLabel">Ajouter un utilisateur
+                                                </h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <div class="mb-3">
+                                                    <label for="#" class="form-label">Nom utlisateur</label>
+                                                    <input type="text" class="form-control" id="username"
+                                                        aria-describedby="basic-addon3 basic-addon4"
+                                                        placeholder="Ex:Mabgas">
+
+                                                    <label for="#" class="form-label">Email</label>
+                                                    <input type="text" class="form-control" id="email"
+                                                        aria-describedby="basic-addon3 basic-addon4"
+                                                        placeholder="Ex:dg@dobas.cg">
+
+                                                    <label for="#" class="form-label">Tel</label>
+                                                    <input type="text" class="form-control" id="tel"
+                                                        aria-describedby="basic-addon3 basic-addon4"
+                                                        placeholder="Ex:06 600 00 00">
+
+                                                    <label for="#" class="form-label">Role</label>
+                                                    <select class="form-select form-select-sm"
+                                                        aria-label=".form-select-sm example">
+                                                        <option selected>Choisir le role</option>
+                                                        <option value="1">Admin-p</option>
+                                                        <option value="2">Admin</option>
+                                                        <option value="3">Manager</option>
+                                                    </select>
+
+                                                    <label for="#" class="form-label">Mot de passe</label>
+                                                    <input type="password" class="form-control" id="mdp"
+                                                        aria-describedby="basic-addon3 basic-addon4">
+
+
+
+                                                </div>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Annuler</button>
+                                                <button type="button" class="btn btn-add">Ajouter</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Page Header -->
+
+
+
+                        <!-- Search Filter -->
+                        <div class="row filter-row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-input">
+                                    <label class="focus-label">Nom</label>
+                                    <input type="text" class="form-control floating" placeholder="Ex: Mabagas">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="form-input">
+                                    <label class="focus-label">Email</label>
+                                    <input type="text" class="form-control floating" placeholder="Ex: dg@dobas.cg">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <label for="#" class="form-input">Role</label>
+                                <select class="form-select form-select-sm floating"
+                                    aria-label=".form-select-sm example">
+                                    <option selected>Choisir le role</option>
+                                    <option value="1">Admin-p</option>
+                                    <option value="2">Admin</option>
+                                    <option value="3">Manager</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <label for="#" class="form-input"></label>
+                                <button href="#" class="btn btn-success form-control">Recherche </button>
+                            </div>
+                        </div>
+                        <!-- /Search Filter -->
+
+                        <div class="table-data">
+                            <div class="order">
+                                <div class="head">
+                                    <h3>User(s) </h3>
+                                </div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Nom</th>
+                                            <th>Email</th>
+                                            <th>Tel</th>
+                                            <th>Role</th>
+                                            <th>Statut</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <img src="img/user.png">
+                                                <p>John Doe</p>
+                                            </td>
+                                            <td>dg@dobas.cg</td>
+                                            <td>+242 066000000</td>
+                                            <td>Admin-P</td>
+                                            <td><span class="status completed">En ligne</span></td>
+                                            <td><i class="bi bi-three-dots-vertical" type="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-eye-fill">
+                                                            </i> Voir</a></li>
+                                                    <li><a class="dropdown-item" href="#"><i
+                                                                class="bi bi-pencil-square"> </i> Modifier</a></li>
+                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-trash3-fill">
+                                                            </i> Supprimer</a></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="img/user.png">
+                                                <p>John Doe</p>
+                                            </td>
+                                            <td>dg@dobas.cg</td>
+                                            <td>+242 066000000</td>
+                                            <td>Admin</td>
+                                            <td><span class="status pending">Hors</span></td>
+                                            <td><i class="bi bi-three-dots-vertical" type="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-eye-fill">
+                                                            </i> Voir</a></li>
+                                                    <li><a class="dropdown-item" href="#"><i
+                                                                class="bi bi-pencil-square"> </i> Modifier</a></li>
+                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-trash3-fill">
+                                                            </i> Supprimer</a></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="img/user.png">
+                                                <p>John Doe</p>
+                                            </td>
+                                            <td>dg@dobas.cg</td>
+                                            <td>+242 066000000</td>
+                                            <td><span class="status processed">Manager</span></td>
+                                            <td><span class="status completed">En ligne</span></td>
+                                            <td><i class="bi bi-three-dots-vertical" type="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-eye-fill">
+                                                            </i> Voir</a></li>
+                                                    <li><a class="dropdown-item" href="#"><i
+                                                                class="bi bi-pencil-square"> </i> Modifier</a></li>
+                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-trash3-fill">
+                                                            </i> Supprimer</a></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
+        integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
+        crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
