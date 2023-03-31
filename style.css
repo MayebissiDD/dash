@@ -670,3 +670,13 @@ h5.table-avatar.blue-link a {
 	background-color: var(--bg-dob-green);
 	color:#fff;
 }
+
+.box-center{
+	position: relative;
+	text-align: center;
+}
+.box-center .eli-title{
+color: #D31933;
+font-size: 20px;
+position: relative;
+}

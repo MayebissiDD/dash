@@ -136,32 +136,32 @@
 
                         <!-- Add User Modal -->
 
-                     
+
 
                         <!-- Search Filter -->
                         <div class="row filter-row">
                             <div class="col-sm-6 col-md-3">
                                 <div class="form-input">
-									<label class="focus-label">Nom</label>
-									<input type="text" class="form-control floating" placeholder="Ex: MABGAAS">
+                                    <label class="focus-label">Nom</label>
+                                    <input type="text" class="form-control floating" placeholder="Ex: MABGAAS">
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-3">
                                 <div class="form-input">
-									<label class="focus-label">Filière</label>
+                                    <label class="focus-label">Filière</label>
                                     <input type="text" class="form-control floating" placeholder="Ex: Informatique">
                                 </div>
                             </div>
 
                             <div class="col-sm-6 col-md-3">
-									<label for="#" class="form-input">Ecole</label>
-                                    <select class="form-select form-select-sm floating"
-									aria-label=".form-select-sm example">
-                                        <option>IMB</option>
-                                        <option>ESCAT</option>
-                                        <option>ISTP</option>
-										<option>EAD</option>
-                                    </select>
+                                <label for="#" class="form-input">Ecole</label>
+                                <select class="form-select form-select-sm floating"
+                                    aria-label=".form-select-sm example">
+                                    <option>IMB</option>
+                                    <option>ESCAT</option>
+                                    <option>ISTP</option>
+                                    <option>EAD</option>
+                                </select>
                             </div>
                             <div class="col-sm-6 col-md-3">
                                 <a href="#" class="btn btn-success">Recherche </a>
@@ -173,7 +173,7 @@
                             <div class="order">
                                 <div class="head">
                                     <h3>Candidature(s) </h3>
-                                    
+
                                 </div>
                                 <table>
                                     <thead>
@@ -196,12 +196,176 @@
                                             <td>Informatique et reseau</td>
                                             <td>IMB</td>
                                             <td><span class="status completed">Valider</span></td>
-                                            <td><i class="bi bi-three-dots-vertical" type="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                            <td><i class="bi bi-three-dots-vertical" type="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+                                                <!-- Option avec modal -->
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-eye-fill"> </i> Voir</a></li>
-													<li><a class="dropdown-item" href="#"><i class="bi bi-bookmark-check-fill"> </i> Valider</a></li>
-                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-x-octagon-fill"> </i> Eliminer</a></li>
-                                                  </ul></td>
+                                                    <li><a class="dropdown-item" href="#" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#view_candidate"><i
+                                                                class="bi bi-eye-fill"> </i> Voir</a></li>
+                                                    <li><a class="dropdown-item" href="#" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#val_candidate"><i
+                                                                class="bi bi-bookmark-check-fill"> </i> Valider</a></li>
+                                                    <li><a class="dropdown-item" href="#" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#eli_candidate"><i
+                                                                class="bi bi-x-octagon-fill"> </i> Eliminer</a></li>
+                                                </ul>
+
+                                                <!-- modal options -->
+
+                                                <!-- view candidate modal -->
+                                                <div class="modal fade" id="view_candidate" data-bs-backdrop="static"
+                                                    data-bs-keyboard="false" tabindex="-1"
+                                                    aria-labelledby="view_candidateLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h1 class="modal-title fs-5" id="view_candidateLabel">Ajouter
+                                                                    un utilisateur
+                                                                </h1>
+                                                                <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+
+                                                                <div class="mb-3">
+                                                                    <label for="#" class="form-label">Nom
+                                                                        utlisateur</label>
+                                                                    <input type="text" class="form-control"
+                                                                        id="username"
+                                                                        aria-describedby="basic-addon3 basic-addon4"
+                                                                        placeholder="Ex:Mabgas">
+
+                                                                    <label for="#" class="form-label">Email</label>
+                                                                    <input type="text" class="form-control" id="email"
+                                                                        aria-describedby="basic-addon3 basic-addon4"
+                                                                        placeholder="Ex:dg@dobas.cg">
+
+                                                                    <label for="#" class="form-label">Tel</label>
+                                                                    <input type="text" class="form-control" id="tel"
+                                                                        aria-describedby="basic-addon3 basic-addon4"
+                                                                        placeholder="Ex:06 600 00 00">
+
+                                                                    <label for="#" class="form-label">Role</label>
+                                                                    <select class="form-select form-select-sm"
+                                                                        aria-label=".form-select-sm example">
+                                                                        <option selected>Choisir le role</option>
+                                                                        <option value="1">Admin-p</option>
+                                                                        <option value="2">Admin</option>
+                                                                        <option value="3">Manager</option>
+                                                                    </select>
+
+                                                                    <label for="#" class="form-label">Mot de
+                                                                        passe</label>
+                                                                    <input type="password" class="form-control" id="mdp"
+                                                                        aria-describedby="basic-addon3 basic-addon4">
+
+
+
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-bs-dismiss="modal">Annuler</button>
+                                                                <button type="button"
+                                                                    class="btn btn-add">Ajouter</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Accorde candidate Modal -->
+                                                <div class="modal fade" id="val_candidate" data-bs-backdrop="static"
+                                                    data-bs-keyboard="false" tabindex="-1"
+                                                    aria-labelledby="val_candidateLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h1 class="modal-title fs-5" id="val_candidateLabel">Ajouter
+                                                                    un utilisateur
+                                                                </h1>
+                                                                <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+
+                                                                <div class="mb-3">
+                                                                    <label for="#" class="form-label">Nom
+                                                                        utlisateur</label>
+                                                                    <input type="text" class="form-control"
+                                                                        id="username"
+                                                                        aria-describedby="basic-addon3 basic-addon4"
+                                                                        placeholder="Ex:Mabgas">
+
+                                                                    <label for="#" class="form-label">Email</label>
+                                                                    <input type="text" class="form-control" id="email"
+                                                                        aria-describedby="basic-addon3 basic-addon4"
+                                                                        placeholder="Ex:dg@dobas.cg">
+
+                                                                    <label for="#" class="form-label">Tel</label>
+                                                                    <input type="text" class="form-control" id="tel"
+                                                                        aria-describedby="basic-addon3 basic-addon4"
+                                                                        placeholder="Ex:06 600 00 00">
+
+                                                                    <label for="#" class="form-label">Role</label>
+                                                                    <select class="form-select form-select-sm"
+                                                                        aria-label=".form-select-sm example">
+                                                                        <option selected>Choisir le role</option>
+                                                                        <option value="1">Admin-p</option>
+                                                                        <option value="2">Admin</option>
+                                                                        <option value="3">Manager</option>
+                                                                    </select>
+
+                                                                    <label for="#" class="form-label">Mot de
+                                                                        passe</label>
+                                                                    <input type="password" class="form-control" id="mdp"
+                                                                        aria-describedby="basic-addon3 basic-addon4">
+
+
+
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-bs-dismiss="modal">Annuler</button>
+                                                                <button type="button"
+                                                                    class="btn btn-add">Ajouter</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Elimine candidate Modal -->
+                                                <div class="modal fade" id="eli_candidate" data-bs-backdrop="static"
+                                                    data-bs-keyboard="false" tabindex="-1"
+                                                    aria-labelledby="eli_candidateLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered box-center">
+
+                                                        <div class="modal-content">
+                                                            <div class="modal-header eli-title">
+                                                                <h1 class="modal-title fs-5" id="eli_candidateLabel">Eliminer le candidat
+                                                                </h1>
+                                                            </div>
+                                                            <div class="modal-body position-relative">
+
+                                                                Voulez-vous vraiment Eliminer ce candidat?
+
+                                                                <br>
+                                                                <button type="button"
+                                                                class="btn btn-danger">Eliminer</button>
+                                                                <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Annuler</button>
+                                                               
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- fin modal options -->
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>
@@ -211,13 +375,21 @@
                                             <td>Deo</td>
                                             <td>Management</td>
                                             <td>ISTP</td>
-                                            <td><span class="status pending">Eliminer</span></td> 
-                                            <td><i class="bi bi-three-dots-vertical" type="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                                                <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-eye-fill"> </i> Voir</a></li>
-													<li><a class="dropdown-item" href="#"><i class="bi bi-validation"> </i> Valider</a></li>
-                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-delete"> </i> Eliminer</a></li>
-                                                  </ul></td>
+                                            <td><span class="status pending">Eliminer</span></td>
+                                            <td><i class="bi bi-three-dots-vertical" type="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="#" type="button"
+                                                                data-bs-toggle="modal" data-bs-target="#view_candidate"><i
+                                                                    class="bi bi-eye-fill"> </i> Voir</a></li>
+                                                        <li><a class="dropdown-item" href="#" type="button"
+                                                                data-bs-toggle="modal" data-bs-target="#val_candidate"><i
+                                                                    class="bi bi-bookmark-check-fill"> </i> Valider</a></li>
+                                                        <li><a class="dropdown-item" href="#" type="button"
+                                                                data-bs-toggle="modal" data-bs-target="#eli_candidate"><i
+                                                                    class="bi bi-x-octagon-fill"> </i> Eliminer</a></li>
+                                                    </ul>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>
@@ -228,12 +400,20 @@
                                             <td>Marketing</td>
                                             <td>IMB</td>
                                             <td><span class="status process">Traitement</span></td>
-                                            <td><i class="bi bi-three-dots-vertical" type="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                                                <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-eye-fill"> </i> Voir</a></li>
-													<li><a class="dropdown-item" href="#"><i class="bi bi-validation"> </i> Valider</a></li>
-                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-delete"> </i> Eliminer</a></li>
-                                                  </ul></td>
+                                            <td><i class="bi bi-three-dots-vertical" type="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="#" type="button"
+                                                                data-bs-toggle="modal" data-bs-target="#view_candidate"><i
+                                                                    class="bi bi-eye-fill"> </i> Voir</a></li>
+                                                        <li><a class="dropdown-item" href="#" type="button"
+                                                                data-bs-toggle="modal" data-bs-target="#val_candidate"><i
+                                                                    class="bi bi-bookmark-check-fill"> </i> Valider</a></li>
+                                                        <li><a class="dropdown-item" href="#" type="button"
+                                                                data-bs-toggle="modal" data-bs-target="#eli_candidate"><i
+                                                                    class="bi bi-x-octagon-fill"> </i> Eliminer</a></li>
+                                                    </ul>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
