@@ -259,13 +259,139 @@
                                             <td><i class="bi bi-three-dots-vertical" type="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false"></i>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-eye-fill">
+                                                    <li><a class="dropdown-item" href="#" type="button"
+                                                        data-bs-toggle="modal" data-bs-target="#view_user"><i class="bi bi-eye-fill">
                                                             </i> Voir</a></li>
-                                                    <li><a class="dropdown-item" href="#"><i
+                                                    <li><a class="dropdown-item" href="#" type="button"
+                                                        data-bs-toggle="modal" data-bs-target="#modif_user"><i
                                                                 class="bi bi-pencil-square"> </i> Modifier</a></li>
-                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-trash3-fill">
+                                                    <li><a class="dropdown-item" href="#" type="button"
+                                                        data-bs-toggle="modal" data-bs-target="#sup_user">><i class="bi bi-trash3-fill">
                                                             </i> Supprimer</a></li>
                                                 </ul>
+
+
+
+
+
+<!-- modal options -->
+
+                                                <!-- view user modal -->
+                                                <div class="modal fade" id="view_user" data-bs-backdrop="static"
+                                                    data-bs-keyboard="false" tabindex="-1"
+                                                    aria-labelledby="view_userLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h1 class="modal-title fs-5" id="view_userLabel">Ajouter
+                                                                    un utilisateur
+                                                                </h1>
+                                                                <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+
+                                                                <div class="mb-3">
+                                                                    <label for="#" class="form-label">Nom
+                                                                        utlisateur</label>
+                                                                    <input type="text" class="form-control"
+                                                                        id="username"
+                                                                        aria-describedby="basic-addon3 basic-addon4"
+                                                                        placeholder="Ex:Mabgas">
+
+                                                                    <label for="#" class="form-label">Email</label>
+                                                                    <input type="text" class="form-control" id="email"
+                                                                        aria-describedby="basic-addon3 basic-addon4"
+                                                                        placeholder="Ex:dg@dobas.cg">
+
+                                                                    <label for="#" class="form-label">Tel</label>
+                                                                    <input type="text" class="form-control" id="tel"
+                                                                        aria-describedby="basic-addon3 basic-addon4"
+                                                                        placeholder="Ex:06 600 00 00">
+
+                                                                    <label for="#" class="form-label">Role</label>
+                                                                    <select class="form-select form-select-sm"
+                                                                        aria-label=".form-select-sm example">
+                                                                        <option selected>Choisir le role</option>
+                                                                        <option value="1">Admin-p</option>
+                                                                        <option value="2">Admin</option>
+                                                                        <option value="3">Manager</option>
+                                                                    </select>
+
+                                                                    <label for="#" class="form-label">Mot de
+                                                                        passe</label>
+                                                                    <input type="password" class="form-control" id="mdp"
+                                                                        aria-describedby="basic-addon3 basic-addon4">
+
+
+
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-bs-dismiss="modal">Annuler</button>
+                                                                <button type="button"
+                                                                    class="btn btn-add">Ajouter</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Modification candidate Modal -->
+                                                <div class="modal fade" id="modif_user" data-bs-backdrop="static"
+                                                data-bs-keyboard="false" tabindex="-1"
+                                                aria-labelledby="modif_userLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered box-center">
+
+                                                    <div class="modal-content">
+                                                        <div class="modal-header val-title">
+                                                            <h1 class="modal-title fs-5" id="modif_userLabel">Valider la demande du candidat
+                                                            </h1>
+                                                        </div>
+                                                        <div class="modal-body position-relative">
+
+                                                            Validez-vous cette demande?
+
+                                                            <br>
+                                                            <button type="button"
+                                                            class="btn btn-success">Valider</button>
+                                                            <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">Annuler</button>
+                                                           
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                                <!-- Elimine candidate Modal -->
+                                                <div class="modal fade" id="sup_user" data-bs-backdrop="static"
+                                                    data-bs-keyboard="false" tabindex="-1"
+                                                    aria-labelledby="sup_userLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered box-center">
+
+                                                        <div class="modal-content">
+                                                            <div class="modal-header eli-title">
+                                                                <h1 class="modal-title fs-5" id="sup_userLabel">Eliminer le candidat
+                                                                </h1>
+                                                            </div>
+                                                            <div class="modal-body position-relative">
+
+                                                                Voulez-vous vraiment Eliminer ce candidat?
+
+                                                                <br>
+                                                                <button type="button"
+                                                                class="btn btn-danger">Eliminer</button>
+                                                                <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Annuler</button>
+                                                               
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- fin modal options -->
+
                                             </td>
                                         </tr>
                                         <tr>

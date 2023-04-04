@@ -278,65 +278,29 @@
 
                                                 <!-- Accorde candidate Modal -->
                                                 <div class="modal fade" id="val_candidate" data-bs-backdrop="static"
-                                                    data-bs-keyboard="false" tabindex="-1"
-                                                    aria-labelledby="val_candidateLabel" aria-hidden="true">
-                                                    <div class="modal-dialog modal-dialog-centered">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <h1 class="modal-title fs-5" id="val_candidateLabel">Ajouter
-                                                                    un utilisateur
-                                                                </h1>
-                                                                <button type="button" class="btn-close"
-                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
-                                                            </div>
-                                                            <div class="modal-body">
+                                                data-bs-keyboard="false" tabindex="-1"
+                                                aria-labelledby="val_candidateLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered box-center">
 
-                                                                <div class="mb-3">
-                                                                    <label for="#" class="form-label">Nom
-                                                                        utlisateur</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="username"
-                                                                        aria-describedby="basic-addon3 basic-addon4"
-                                                                        placeholder="Ex:Mabgas">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header val-title">
+                                                            <h1 class="modal-title fs-5" id="val_candidateLabel">Valider la demande du candidat
+                                                            </h1>
+                                                        </div>
+                                                        <div class="modal-body position-relative">
 
-                                                                    <label for="#" class="form-label">Email</label>
-                                                                    <input type="text" class="form-control" id="email"
-                                                                        aria-describedby="basic-addon3 basic-addon4"
-                                                                        placeholder="Ex:dg@dobas.cg">
+                                                            Validez-vous cette demande?
 
-                                                                    <label for="#" class="form-label">Tel</label>
-                                                                    <input type="text" class="form-control" id="tel"
-                                                                        aria-describedby="basic-addon3 basic-addon4"
-                                                                        placeholder="Ex:06 600 00 00">
-
-                                                                    <label for="#" class="form-label">Role</label>
-                                                                    <select class="form-select form-select-sm"
-                                                                        aria-label=".form-select-sm example">
-                                                                        <option selected>Choisir le role</option>
-                                                                        <option value="1">Admin-p</option>
-                                                                        <option value="2">Admin</option>
-                                                                        <option value="3">Manager</option>
-                                                                    </select>
-
-                                                                    <label for="#" class="form-label">Mot de
-                                                                        passe</label>
-                                                                    <input type="password" class="form-control" id="mdp"
-                                                                        aria-describedby="basic-addon3 basic-addon4">
-
-
-
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-secondary"
-                                                                    data-bs-dismiss="modal">Annuler</button>
-                                                                <button type="button"
-                                                                    class="btn btn-add">Ajouter</button>
-                                                            </div>
+                                                            <br>
+                                                            <button type="button"
+                                                            class="btn btn-success">Valider</button>
+                                                            <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">Annuler</button>
+                                                           
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </div>
 
                                                 <!-- Elimine candidate Modal -->
                                                 <div class="modal fade" id="eli_candidate" data-bs-backdrop="static"
