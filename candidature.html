@@ -219,10 +219,10 @@
                                                     data-bs-keyboard="false" tabindex="-1"
                                                     aria-labelledby="view_candidateLabel" aria-hidden="true">
                                                     <div class="modal-dialog modal-dialog-centered">
-                                                        <div class="modal-content">
+                                                        <div class="modal-content border align-items-center">
                                                             <div class="modal-header">
-                                                                <h1 class="modal-title fs-5" id="view_candidateLabel">Ajouter
-                                                                    un utilisateur
+                                                                <h1 class="modal-title fs-5" id="view_candidateLabel">
+                                                                    Informations du candidat(e)
                                                                 </h1>
                                                                 <button type="button" class="btn-close"
                                                                     data-bs-dismiss="modal" aria-label="Close"></button>
@@ -230,47 +230,22 @@
                                                             <div class="modal-body">
 
                                                                 <div class="mb-3">
-                                                                    <label for="#" class="form-label">Nom
-                                                                        utlisateur</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="username"
-                                                                        aria-describedby="basic-addon3 basic-addon4"
-                                                                        placeholder="Ex:Mabgas">
-
-                                                                    <label for="#" class="form-label">Email</label>
-                                                                    <input type="text" class="form-control" id="email"
-                                                                        aria-describedby="basic-addon3 basic-addon4"
-                                                                        placeholder="Ex:dg@dobas.cg">
-
-                                                                    <label for="#" class="form-label">Tel</label>
-                                                                    <input type="text" class="form-control" id="tel"
-                                                                        aria-describedby="basic-addon3 basic-addon4"
-                                                                        placeholder="Ex:06 600 00 00">
-
-                                                                    <label for="#" class="form-label">Role</label>
-                                                                    <select class="form-select form-select-sm"
-                                                                        aria-label=".form-select-sm example">
-                                                                        <option selected>Choisir le role</option>
-                                                                        <option value="1">Admin-p</option>
-                                                                        <option value="2">Admin</option>
-                                                                        <option value="3">Manager</option>
-                                                                    </select>
-
-                                                                    <label for="#" class="form-label">Mot de
-                                                                        passe</label>
-                                                                    <input type="password" class="form-control" id="mdp"
-                                                                        aria-describedby="basic-addon3 basic-addon4">
-
-
+                                                                    <img src="./img/boy.png" class="rounded mb-3"
+                                                                        style="height: 75px; width: 75px;">
+                                                                    <h6><span>Nom: </span> MABGAS</h6>
+                                                                    <h6><span>Prénom: </span> Mabgas</h6>
+                                                                    <h6><label>Tel: </label> 06 4397707</h6>
+                                                                    <h6><label>Adresse: </label> 00 rue Maloukou,
+                                                                        Quartier</h6>
+                                                                    <h6><label>Ecole visée: </label> IMB</h6>
+                                                                    <h6><label>Filière: </label> Informatique</h6>
 
                                                                 </div>
+                                                                <button type="button" class="btn btn-success"
+                                                                    class="btn btn-primary">
+                                                                    Voir document(s)
+                                                                </button>
 
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-secondary"
-                                                                    data-bs-dismiss="modal">Annuler</button>
-                                                                <button type="button"
-                                                                    class="btn btn-add">Ajouter</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -278,29 +253,30 @@
 
                                                 <!-- Accorde candidate Modal -->
                                                 <div class="modal fade" id="val_candidate" data-bs-backdrop="static"
-                                                data-bs-keyboard="false" tabindex="-1"
-                                                aria-labelledby="val_candidateLabel" aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered box-center">
+                                                    data-bs-keyboard="false" tabindex="-1"
+                                                    aria-labelledby="val_candidateLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered box-center">
 
-                                                    <div class="modal-content align-items-center">
-                                                        <div class="modal-header val-title">
-                                                            <h1 class="modal-title fs-5" id="val_candidateLabel">Valider la demande du candidat
-                                                            </h1>
-                                                        </div>
-                                                        <div class="modal-body position-relative">
+                                                        <div class="modal-content align-items-center">
+                                                            <div class="modal-header val-title">
+                                                                <h1 class="modal-title fs-5" id="val_candidateLabel">
+                                                                    Valider la demande du candidat
+                                                                </h1>
+                                                            </div>
+                                                            <div class="modal-body position-relative">
 
-                                                            Validez-vous cette demande?
+                                                                Validez-vous cette demande?
 
-                                                            <br>
-                                                            <button type="button"
-                                                            class="btn btn-success">Valider</button>
-                                                            <button type="button" class="btn btn-secondary"
-                                                            data-bs-dismiss="modal">Annuler</button>
-                                                           
+                                                                <br>
+                                                                <button type="button"
+                                                                    class="btn btn-success">Valider</button>
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-bs-dismiss="modal">Annuler</button>
+
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
 
                                                 <!-- Elimine candidate Modal -->
                                                 <div class="modal fade" id="eli_candidate" data-bs-backdrop="static"
@@ -310,7 +286,8 @@
 
                                                         <div class="modal-content align-items-center">
                                                             <div class="modal-header eli-title">
-                                                                <h1 class="modal-title fs-5" id="eli_candidateLabel">Eliminer le candidat
+                                                                <h1 class="modal-title fs-5" id="eli_candidateLabel">
+                                                                    Eliminer le candidat
                                                                 </h1>
                                                             </div>
                                                             <div class="modal-body position-relative">
@@ -319,10 +296,10 @@
 
                                                                 <br>
                                                                 <button type="button"
-                                                                class="btn btn-danger">Eliminer</button>
+                                                                    class="btn btn-danger">Eliminer</button>
                                                                 <button type="button" class="btn btn-secondary"
-                                                                data-bs-dismiss="modal">Annuler</button>
-                                                               
+                                                                    data-bs-dismiss="modal">Annuler</button>
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -342,17 +319,17 @@
                                             <td><span class="status pending">Eliminer</span></td>
                                             <td><i class="bi bi-three-dots-vertical" type="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false"></i>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a class="dropdown-item" href="#" type="button"
-                                                                data-bs-toggle="modal" data-bs-target="#view_candidate"><i
-                                                                    class="bi bi-eye-fill"> </i> Voir</a></li>
-                                                        <li><a class="dropdown-item" href="#" type="button"
-                                                                data-bs-toggle="modal" data-bs-target="#val_candidate"><i
-                                                                    class="bi bi-bookmark-check-fill"> </i> Valider</a></li>
-                                                        <li><a class="dropdown-item" href="#" type="button"
-                                                                data-bs-toggle="modal" data-bs-target="#eli_candidate"><i
-                                                                    class="bi bi-x-octagon-fill"> </i> Eliminer</a></li>
-                                                    </ul>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#view_candidate"><i
+                                                                class="bi bi-eye-fill"> </i> Voir</a></li>
+                                                    <li><a class="dropdown-item" href="#" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#val_candidate"><i
+                                                                class="bi bi-bookmark-check-fill"> </i> Valider</a></li>
+                                                    <li><a class="dropdown-item" href="#" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#eli_candidate"><i
+                                                                class="bi bi-x-octagon-fill"> </i> Eliminer</a></li>
+                                                </ul>
                                             </td>
                                         </tr>
                                         <tr>
@@ -366,17 +343,17 @@
                                             <td><span class="status process">Traitement</span></td>
                                             <td><i class="bi bi-three-dots-vertical" type="button"
                                                     data-bs-toggle="dropdown" aria-expanded="false"></i>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a class="dropdown-item" href="#" type="button"
-                                                                data-bs-toggle="modal" data-bs-target="#view_candidate"><i
-                                                                    class="bi bi-eye-fill"> </i> Voir</a></li>
-                                                        <li><a class="dropdown-item" href="#" type="button"
-                                                                data-bs-toggle="modal" data-bs-target="#val_candidate"><i
-                                                                    class="bi bi-bookmark-check-fill"> </i> Valider</a></li>
-                                                        <li><a class="dropdown-item" href="#" type="button"
-                                                                data-bs-toggle="modal" data-bs-target="#eli_candidate"><i
-                                                                    class="bi bi-x-octagon-fill"> </i> Eliminer</a></li>
-                                                    </ul>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#view_candidate"><i
+                                                                class="bi bi-eye-fill"> </i> Voir</a></li>
+                                                    <li><a class="dropdown-item" href="#" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#val_candidate"><i
+                                                                class="bi bi-bookmark-check-fill"> </i> Valider</a></li>
+                                                    <li><a class="dropdown-item" href="#" type="button"
+                                                            data-bs-toggle="modal" data-bs-target="#eli_candidate"><i
+                                                                class="bi bi-x-octagon-fill"> </i> Eliminer</a></li>
+                                                </ul>
                                             </td>
                                         </tr>
                                     </tbody>
